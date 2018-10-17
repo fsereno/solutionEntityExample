@@ -1,2 +1,0 @@
-# solutionEntityExample
-solutionEntityExample

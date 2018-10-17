@@ -29,8 +29,12 @@ namespace Repositories
                 throw new ArgumentNullException(nameof(entity));
             }
 
-            _collection.Add(entity);
+            var exists = Get(entity);
 
+            if (exists == null)
+            {
+                _collection.Add(entity);
+            }         
         }
     }
 }

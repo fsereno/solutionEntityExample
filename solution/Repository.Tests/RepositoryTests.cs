@@ -50,5 +50,6 @@ namespace Repository.Tests
             Assert.That(result.Id, Is.EqualTo(3));
 
         }
+
     }
 }

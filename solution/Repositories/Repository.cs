@@ -34,7 +34,11 @@ namespace Repositories
             if (exists == null)
             {
                 _collection.Add(entity);
-            }         
+            }
+            else
+            {
+                throw new InvalidOperationException("You cannot add duplicate entities");
+            }       
         }
     }
 }

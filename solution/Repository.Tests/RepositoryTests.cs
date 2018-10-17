@@ -8,8 +8,7 @@ namespace Repository.Tests
     public class RepositoryTests
     {
         private IRepository<Entity> _repository;
-        
-       
+
         [SetUp]
         public void BeforeEach()
         {
@@ -24,7 +23,6 @@ namespace Repository.Tests
         [Test]
         public void Get()
         {
-            
             //Arrange
             var person = new Person(){Id = 1};
 
@@ -52,6 +50,5 @@ namespace Repository.Tests
             Assert.That(result.Id, Is.EqualTo(3));
 
         }
-
     }
 }

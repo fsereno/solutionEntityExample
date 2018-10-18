@@ -15,6 +15,10 @@ namespace Repositories
         }
         public Entity Get(Entity entity)
         {
+            if (entity == null)
+            {
+                throw new ArgumentNullException(nameof(entity));
+            }
 
             var result = _collection.SingleOrDefault(
                 x=>x.Id == entity.Id);

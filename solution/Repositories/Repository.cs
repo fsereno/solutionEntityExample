@@ -44,5 +44,17 @@ namespace Repositories
                 throw new InvalidOperationException("You cannot add duplicate entities");
             }       
         }
+        public List<Entity> SortById(List<Entity> collection)
+        {
+            if (collection == null)
+            {
+                throw new ArgumentNullException(nameof(collection));
+            }
+
+            collection.Sort();
+
+            return collection;
+
+        }
     }
 }
